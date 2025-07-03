@@ -65,8 +65,6 @@ def main():
             clear_screen()
             print("Exiting game. Goodbye!")
             break
-
-    menu.display()
     
 if __name__ == "__main__":  # move this to the bottom so that everything else inside your main() function
     main()
