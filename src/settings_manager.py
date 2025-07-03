@@ -53,8 +53,8 @@ class SettingsMenu(Menu): # Inherit from Menu
     def display_menu(self):
         clear_screen()
         print("\n--- Settings ---")
-        print(f"Autosave Enabled: {self.settings_manager.get_setting("autosave_enabled")}")
-        print(f"Autosave Interval: {self.settings_manager.get_setting("autosave_interval")} steps")
+        print(f"Autosave Enabled: {self.settings_manager.get_setting('autosave_enabled')}")
+        print(f"Autosave Interval: {self.settings_manager.get_setting('autosave_interval')} steps")
         for key, value in self.options.items():
             print(f"{key}. {value}")
 
