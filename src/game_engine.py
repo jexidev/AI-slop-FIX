@@ -64,7 +64,7 @@ class GameEngine:
                     row_str += tile_char
             print(row_str)
         
-        print(f"Health: {self.player.health}/{self.player.max_health} Attack: {self.player.attack} Defense: {self.player.defense})")
+        print(f"Health: {self.player.health}/{self.player.max_health} Attack: {self.player.attack} Defense: {self.player.defense}")
 
         # Display Blacksmith Shop name if player is inside
         shop_start_x = 1
