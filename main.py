@@ -5,10 +5,13 @@ from src.settings_manager import SettingsManager, SettingsMenu
 from src.utils import clear_screen
 from src.map import Map # Import the Map class
 
-if __name__ == "__main__":
-    menu = Menu()
-    save_manager = SaveManager()
+def main():
+    # set up the game engine first
     settings_manager = SettingsManager()
+    save_manager = SaveManager()
+    game_engine = GameEngine(width=20, height=15, settings_manager=settings_manager)  # Pass settings_manager here
+
+    menu = Menu(game_engine)  # then you can pass the game engine through menu
 
     while True:
         clear_screen()
@@ -62,3 +65,8 @@ if __name__ == "__main__":
             clear_screen()
             print("Exiting game. Goodbye!")
             break
+
+    menu.display()
+    
+if __name__ == "__main__":  # move this to the bottom so that everything else inside your main() function
+    main()
